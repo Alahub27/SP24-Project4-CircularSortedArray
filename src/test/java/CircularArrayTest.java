@@ -99,15 +99,15 @@ public class CircularArrayTest {
 
         list.removeFirst();
         boolean elementExist = list.exists(2);
-        assertEquals("Element was removed but seems to still exist, \nfunction might be checking underlying array ", false, elementExist);
+        assertEquals("Element 2 was removed but seems to still exist, \nfunction might be checking underlying array ", false, elementExist);
         list.add(15);
         list.removeLast();
         list.add(13);
         list.add(6);
         elementExist = list.exists(15);
-        assertEquals("Element was expected to exist but, \n", false, elementExist);
+        assertEquals("Element 15 was expected NOT to exist but, \n", false, elementExist);
         elementExist = list.exists(6);
-        assertEquals("Element was expected to exist but, \n", true, elementExist);
+        assertEquals("Element 6 was expected to exist but, \n", true, elementExist);
 
     }
 }
