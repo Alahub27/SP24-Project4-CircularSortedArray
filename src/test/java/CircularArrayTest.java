@@ -106,6 +106,8 @@ public class CircularArrayTest {
         list.add(6);
         elementExist = list.exists(15);
         assertEquals("Element was expected to exist but, \n", false, elementExist);
+        elementExist = list.exists(6);
+        assertEquals("Element was expected to exist but, \n", true, elementExist);
 
     }
 }
